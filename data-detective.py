@@ -49,7 +49,7 @@ def clean_data(tweets):
             
         cleaned_list.append(tweet)
         
-    print(f"Quest 1 Complete: Fixed or removed {bad_rows_fixed_or_removed} bad rows.")
+    print(f"Quest 1 is Completed and also Fixed or removed {bad_rows_fixed_or_removed}  for bad rows.")
     return cleaned_list
 
 def find_viral_tweet(tweets):
@@ -105,8 +105,8 @@ def custom_sort_by_likes(tweets):
         tweets[i] = tweets[max_index]
         tweets[max_index] = temporary_holder
                 
-    print("Quest 3 Complete: Custom Selection Sort Finished.")
-    print("--- Top 10 Most Liked Tweets ---")
+    print("Quest 3 is Completed and the Custom Selection Sort is done.")
+    print(" Top 10 Most Liked Tweets ")
     
     # Slice the list to get exactly the top 10 items
     top_10_tweets = tweets[:10]
@@ -131,7 +131,7 @@ def search_tweets(tweets, keyword):
             matching_tweets.append(tweet)
             
     # Print the len() of this new list to tell the user how many matched
-    print(f"Quest 4 Complete: Found {len(matching_tweets)} tweets matching '{keyword}'.")
+    print(f"Quest 4 is Completed and the found {len(matching_tweets)} tweets matching  are'{keyword}'.")
     
     for tweet in matching_tweets:
         print(f"- [{tweet['Username']}]: {tweet['Text']}")
