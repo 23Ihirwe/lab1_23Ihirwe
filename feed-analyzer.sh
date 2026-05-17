@@ -5,7 +5,7 @@ DATA_FILE="twitter_dataset.csv"
 
 # Verify the target dataset exists and can be read before launching the pipeline
 if [ ! -r "$DATA_FILE" ]; then
-    echo "Error: Cannot read $DATA_FILE. Ensure the file is inside this folder."
+    echo "Error: Cannot read $DATA_FILE. Please ensure the file is inside this folder."
     exit 1
 fi
 
