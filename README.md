@@ -1,6 +1,6 @@
-# 🕵️‍♂️ The Social Media Data Detective
+#  The Social Media Data Detective
 
-## 📌 Project Overview
+##  Project Overview
 **The Social Media Data Detective** is a back-end data engineering and analytics application designed to clean, parse, and extract strategic insights from a massive, messy dataset of 10,000 raw Twitter posts. 
 
 The project simulates a real-world corporate environment where standard automated shortcuts are restricted. To prove a deep understanding of core computing logic, this suite bypasses all built-in shorthand helpers to demonstrate raw algorithmic data manipulation from the ground up. 
@@ -11,7 +11,7 @@ The architecture is split into two components:
 
 ---
 
-## 📁 Project Architecture
+##  Project Architecture
 
 The workspace is organized within a unified directory root folder to ensure zero file-path connection conflicts:
 
@@ -27,7 +27,7 @@ The workspace is organized within a unified directory root folder to ensure zero
 
 ---
 
-## 🚀 Execution Instructions
+##  Execution Instructions
 
 ### 1. Python Analytics Engine
 Run this command from your terminal to launch the sequential data-handling pipeline:
@@ -53,10 +53,10 @@ This application implements a custom **Selection Sort** algorithm inside Quest 3
 
 ---
 
-## 📸 Execution Output Previews
+##  Execution Output Previews
 
 ### Python Script Workflow (Quests 1 - 4)
-![Python Script Execution Output](python_file_output.png)
+![Python Script Execution Output]([python_file_output.png](https://i.imgur.com/g1MjbU8.png))
 
 ### Bash Script Workflow (Active User Rankings)
 ![Bash Script Execution Output](feed_analyser_bash_ouput.png)
