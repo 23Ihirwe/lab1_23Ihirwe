@@ -10,9 +10,14 @@ if [ ! -r "$DATA_FILE" ]; then
 fi
 
 # The exact command chain required by your manager's prompt:
-# 1. cut - Isolates and extracts only the Username data (Column 2)
-# 2. sort - Arranges usernames alphabetically to group identical entries together
-# 3. uniq - Collapses those adjacent duplicates and displays the matching counts
-# 4. sort - Reruns a sort numerically (-n) in reverse/descending order (-r)
-# 5. head - Clips the resulting output stream to show only the Top 5 items
-cut -d',' -f2 "$DATA_FILE" | sort | uniq -c | sort -nr | head -n 5
+# 1. tail - Skips the CSV header row
+# 2. cut - Extracts column 2 (Username)
+# 3. sort - Groups identical usernames together alphabetically
+# 4. uniq -c - Collapses duplicates and generates the occurrence counts
+# 5. sort -nr - Sorts the results numerically in descending order
+# 6. head -n 5 - Filters the output stream to show only the Top 5 items
+# 7. tr -d - Strips hidden Windows formatting characters right before final text display
+tail -n +2 "$DATA_FILE" | cut -d',' -f2 | sort | uniq -c | sort -nr | head -n 5 | tr -d '\r'
+
+
+

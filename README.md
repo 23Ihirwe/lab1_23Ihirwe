@@ -56,7 +56,7 @@ This application implements a custom **Selection Sort** algorithm inside Quest 3
 ##  Execution Output Previews
 
 ### Python Script Workflow (Quests 1 - 4)
-![Python Script Execution Output]([python_file_output.png](https://i.imgur.com/g1MjbU8.png))
+![Python Script Execution Output](https://i.imgur.com/g1MjbU8.png)
 
 ### Bash Script Workflow (Active User Rankings)
-![Bash Script Execution Output](feed_analyser_bash_ouput.png)
+![Bash Script Execution Output](https://i.imgur.com/ZItc1Xo.png)

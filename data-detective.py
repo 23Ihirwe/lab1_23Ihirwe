@@ -136,15 +136,42 @@ def search_tweets(tweets, keyword):
     for tweet in matching_tweets:
         print(f"- [{tweet['Username']}]: {tweet['Text']}")
 
+# === MENU SYSTEM PLACED HERE ===
 if __name__ == "__main__":
-    # Load data using starter code logic
+    # 1. Load raw data file first
     dataset = load_raw_data("twitter_dataset.csv")
     print(f"Loaded {len(dataset)} raw tweets.\n")
     
-    # Execute the Quests sequentially using our raw variables
+    # 2. Always clean it up once before launching menu choices
     cleaned_dataset = clean_data(dataset)
-    find_viral_tweet(cleaned_dataset)
-    custom_sort_by_likes(cleaned_dataset)
     
-    user_keyword = input("Enter a keyword to search for: ")
-    search_tweets(cleaned_dataset, user_keyword)
+    # 3. Handle interactive loop choices safely
+    try:
+        while True:
+            print("\nSOCIAL MEDIA DATA DETECTIVE")
+            print("1. Find Viral Tweet")
+            print("2. Show Top 10 Most Liked Tweets")
+            print("3. Search Tweets by Keyword")
+            print("4. Exit")
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                find_viral_tweet(cleaned_dataset)
+
+            elif choice == "2":
+                custom_sort_by_likes(cleaned_dataset)
+
+            elif choice == "3":
+                keyword = input("Enter keyword to search: ")
+                search_tweets(cleaned_dataset, keyword)
+
+            elif choice == "4":
+                print("Program exited successfully.")
+                break
+
+            else:
+                print("Invalid choice. Try again.")
+
+    except KeyboardInterrupt:
+        print("\nProgram interrupted by user (Ctrl + C). Exiting safely...")
