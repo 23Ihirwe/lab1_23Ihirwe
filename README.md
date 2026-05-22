@@ -48,7 +48,7 @@ bash feed-analyzer.sh
 
 ---
 
-## 📊 Algorithmic Sorting Architecture
+##  Algorithmic Sorting Architecture
 This application implements a custom **Selection Sort** algorithm inside Quest 3 to order data values by popularity rank without relying on banned native `.sort()` or `sorted()` utilities. The loop architecture steps systematically through remaining unsorted array index boundaries, evaluates values using explicit string-to-integer (`int()`) type casting, tracks the index location of the absolute largest total, and runs an evaluation-compliant variable swap to shuffle the top 10 items to the front of the list layout.
 
 ---
